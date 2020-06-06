@@ -107,20 +107,7 @@ var map = new ol.Map({
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
-    var searchLayer = new SearchLayer({
-      layer: lyr_2Mercadosytianguis_2,
-      colName: 'Name',
-      zoom: 10,
-      collapsed: true,
-      map: map
-    });
-
-    map.addControl(searchLayer);
-    document.getElementsByClassName('search-layer')[0]
-    .getElementsByTagName('button')[0].className +=
-    ' fa fa-binoculars';
-    
-map.getView().fit([-10883864.627156, 2014776.730680, -10882092.565283, 2016228.023739], map.getSize());
+map.getView().fit([-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -616,6 +603,10 @@ function createMeasureTooltip() {
 }
 
 
+function convertToFeet(length) {
+    feet_length = length * 3.2808;
+    return feet_length
+}
 
 /**
  * format length output
@@ -632,15 +623,15 @@ var formatLength = function(line) {
       var c2 = ol.proj.transform(coordinates[i + 1], sourceProj, 'EPSG:4326');
       length += ol.sphere.getDistance(c1, c2);
     }
-  var output;
-  if (length > 100) {
-    output = (Math.round(length / 1000 * 100) / 100) +
-        ' ' + 'km';
-  } else {
-    output = (Math.round(length * 100) / 100) +
-        ' ' + 'm';
-  }
-  return output;
+    feet_length = convertToFeet(length)
+
+    var output;
+    if (feet_length > 5280) {
+        output = (Math.round(feet_length / 5280 * 100) / 100) + ' miles';
+    } else {
+        output = (Math.round(feet_length * 100) / 100) + ' ft';
+    }
+    return output;
 };
 
 addInteraction();

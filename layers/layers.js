@@ -68,38 +68,21 @@ var lyr_PINTURAS_4 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/PINTURAS_4.png" /> PINTURAS'
             });
-var format_CARPINTERIAS_5 = new ol.format.GeoJSON();
-var features_CARPINTERIAS_5 = format_CARPINTERIAS_5.readFeatures(json_CARPINTERIAS_5, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_CARPINTERIAS_5 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_CARPINTERIAS_5.addFeatures(features_CARPINTERIAS_5);
-var lyr_CARPINTERIAS_5 = new ol.layer.Vector({
-                declutter: true,
-                source:jsonSource_CARPINTERIAS_5, 
-                style: style_CARPINTERIAS_5,
-                interactive: true,
-                title: '<img src="styles/legend/CARPINTERIAS_5.png" /> CARPINTERIAS'
-            });
 
-lyr_GoogleTerrain_0.setVisible(true);lyr_2InstitucionesEducativas_1.setVisible(true);lyr_2Mercadosytianguis_2.setVisible(true);lyr_2Tiendasdeautoservicioydepartamentales_3.setVisible(true);lyr_PINTURAS_4.setVisible(true);lyr_CARPINTERIAS_5.setVisible(true);
-var layersList = [lyr_GoogleTerrain_0,lyr_2InstitucionesEducativas_1,lyr_2Mercadosytianguis_2,lyr_2Tiendasdeautoservicioydepartamentales_3,lyr_PINTURAS_4,lyr_CARPINTERIAS_5];
+lyr_GoogleTerrain_0.setVisible(true);lyr_2InstitucionesEducativas_1.setVisible(true);lyr_2Mercadosytianguis_2.setVisible(true);lyr_2Tiendasdeautoservicioydepartamentales_3.setVisible(true);lyr_PINTURAS_4.setVisible(true);
+var layersList = [lyr_GoogleTerrain_0,lyr_2InstitucionesEducativas_1,lyr_2Mercadosytianguis_2,lyr_2Tiendasdeautoservicioydepartamentales_3,lyr_PINTURAS_4];
 lyr_2InstitucionesEducativas_1.set('fieldAliases', {'Name': 'Name', 'description': 'description', 'timestamp': 'timestamp', 'begin': 'begin', 'end': 'end', 'altitudeMode': 'altitudeMode', 'tessellate': 'tessellate', 'extrude': 'extrude', 'visibility': 'visibility', 'drawOrder': 'drawOrder', 'icon': 'icon', });
 lyr_2Mercadosytianguis_2.set('fieldAliases', {'Name': 'Name', 'description': 'description', 'timestamp': 'timestamp', 'begin': 'begin', 'end': 'end', 'altitudeMode': 'altitudeMode', 'tessellate': 'tessellate', 'extrude': 'extrude', 'visibility': 'visibility', 'drawOrder': 'drawOrder', 'icon': 'icon', });
 lyr_2Tiendasdeautoservicioydepartamentales_3.set('fieldAliases', {'Name': 'Name', 'description': 'description', 'timestamp': 'timestamp', 'begin': 'begin', 'end': 'end', 'altitudeMode': 'altitudeMode', 'tessellate': 'tessellate', 'extrude': 'extrude', 'visibility': 'visibility', 'drawOrder': 'drawOrder', 'icon': 'icon', });
 lyr_PINTURAS_4.set('fieldAliases', {'FECHA': 'FECHA', 'NOMBRE_DEL': 'NOMBRE_DEL', 'GIRO_COMER': 'GIRO_COMER', 'No__LICENC': 'No__LICENC', 'AÑO_DE_RE': 'AÑO_DE_RE', 'CALLE': 'CALLE', 'No_': 'No_', 'COLONIA': 'COLONIA', 'ID': 'ID', 'X': 'X', 'Y': 'Y', });
-lyr_CARPINTERIAS_5.set('fieldAliases', {'FECHA': 'FECHA', 'NOMBRE_DEL': 'NOMBRE_DEL', 'GIRO_COMER': 'GIRO_COMER', 'No__LICENC': 'No__LICENC', 'AÑO_DE_RE': 'AÑO_DE_RE', 'CALLE': 'CALLE', 'No_': 'No_', 'COLONIA': 'COLONIA', 'ID': 'ID', 'X': 'X', 'Y': 'Y', });
 lyr_2InstitucionesEducativas_1.set('fieldImages', {'Name': '', 'description': '', 'timestamp': '', 'begin': '', 'end': '', 'altitudeMode': '', 'tessellate': '', 'extrude': '', 'visibility': '', 'drawOrder': '', 'icon': '', });
 lyr_2Mercadosytianguis_2.set('fieldImages', {'Name': '', 'description': '', 'timestamp': '', 'begin': '', 'end': '', 'altitudeMode': '', 'tessellate': '', 'extrude': '', 'visibility': '', 'drawOrder': '', 'icon': '', });
 lyr_2Tiendasdeautoservicioydepartamentales_3.set('fieldImages', {'Name': '', 'description': '', 'timestamp': '', 'begin': '', 'end': '', 'altitudeMode': '', 'tessellate': '', 'extrude': '', 'visibility': '', 'drawOrder': '', 'icon': '', });
 lyr_PINTURAS_4.set('fieldImages', {'FECHA': '', 'NOMBRE_DEL': '', 'GIRO_COMER': '', 'No__LICENC': '', 'AÑO_DE_RE': '', 'CALLE': '', 'No_': '', 'COLONIA': '', 'ID': '', 'X': '', 'Y': '', });
-lyr_CARPINTERIAS_5.set('fieldImages', {'FECHA': '', 'NOMBRE_DEL': '', 'GIRO_COMER': '', 'No__LICENC': '', 'AÑO_DE_RE': '', 'CALLE': '', 'No_': '', 'COLONIA': '', 'ID': '', 'X': '', 'Y': '', });
 lyr_2InstitucionesEducativas_1.set('fieldLabels', {'Name': 'no label', 'description': 'no label', 'timestamp': 'no label', 'begin': 'no label', 'end': 'no label', 'altitudeMode': 'no label', 'tessellate': 'no label', 'extrude': 'no label', 'visibility': 'no label', 'drawOrder': 'no label', 'icon': 'no label', });
 lyr_2Mercadosytianguis_2.set('fieldLabels', {'Name': 'no label', 'description': 'no label', 'timestamp': 'no label', 'begin': 'no label', 'end': 'no label', 'altitudeMode': 'no label', 'tessellate': 'no label', 'extrude': 'no label', 'visibility': 'no label', 'drawOrder': 'no label', 'icon': 'no label', });
 lyr_2Tiendasdeautoservicioydepartamentales_3.set('fieldLabels', {'Name': 'no label', 'description': 'no label', 'timestamp': 'no label', 'begin': 'no label', 'end': 'no label', 'altitudeMode': 'no label', 'tessellate': 'no label', 'extrude': 'no label', 'visibility': 'no label', 'drawOrder': 'no label', 'icon': 'no label', });
 lyr_PINTURAS_4.set('fieldLabels', {'FECHA': 'no label', 'NOMBRE_DEL': 'no label', 'GIRO_COMER': 'no label', 'No__LICENC': 'no label', 'AÑO_DE_RE': 'no label', 'CALLE': 'no label', 'No_': 'no label', 'COLONIA': 'no label', 'ID': 'no label', 'X': 'no label', 'Y': 'no label', });
-lyr_CARPINTERIAS_5.set('fieldLabels', {'FECHA': 'no label', 'NOMBRE_DEL': 'no label', 'GIRO_COMER': 'no label', 'No__LICENC': 'no label', 'AÑO_DE_RE': 'no label', 'CALLE': 'no label', 'No_': 'no label', 'COLONIA': 'no label', 'ID': 'no label', 'X': 'no label', 'Y': 'no label', });
-lyr_CARPINTERIAS_5.on('precompose', function(evt) {
+lyr_PINTURAS_4.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
